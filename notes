@@ -1,0 +1,13 @@
+initiate next project
+
+install tailwindcss, postcss-preset-env as dev dependencies
+
+
+configure next.js plus css
+
+next.config.js --filename
+
+--content
+
+withCSS=require(@zeit/next-css);
+module.exports = withCSS({});

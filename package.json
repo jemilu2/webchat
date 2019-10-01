@@ -1,0 +1,24 @@
+{
+  "name": "next-tailwind-template",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "isomorphic-unfetch": "^3.0.0",
+    "next": "9.0.7",
+    "react": "16.10.1",
+    "react-dom": "16.10.1",
+    "tailwindcss": "0.7.2"
+  },
+  "devDependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "autoprefixer": "^9.6.1",
+    "postcss-easy-import": "^3.0.0",
+    "postcss-preset-env": "^6.7.0"
+  }
+}
