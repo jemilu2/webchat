@@ -13,7 +13,9 @@
     "next": "9.0.7",
     "react": "16.10.1",
     "react-dom": "16.10.1",
-    "tailwindcss": "0.7.2"
+    "react-live": "^2.2.1",
+    "tailwindcss": "0.7.2",
+    "uuid": "^3.3.3"
   },
   "devDependencies": {
     "@zeit/next-css": "^1.0.1",
