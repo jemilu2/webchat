@@ -5,6 +5,8 @@ import MessengerBar from './MessengerBar';
 import uuid from 'uuid/v4';
 import { withRouter } from 'next/router'
 
+import ReconnectingWebsocket from 'reconnecting-websocket';
+
 
 class ChatRoom extends React.Component {
 
@@ -44,9 +46,10 @@ class ChatRoom extends React.Component {
     //establishes websocket connection and sets
     //handler for various connection events.
     ws = () => {
-        let url = "ws://localhost:5000/ws"
+        // let url = "ws://localhost:5000/ws"
+        let url = "wss://young-brushlands-05640.herokuapp.com/ws";
         try {
-            this.conn = new window.WebSocket(url);
+            this.conn = new ReconnectingWebsocket(url);
             console.log("ws connection established");
         } catch (error) {
             console.log("Failed to establish ws connection");
