@@ -43,8 +43,6 @@ class ChatRoom extends React.Component {
         }
     }
 
-    //establishes websocket connection and sets
-    //handler for various connection events.
     ws = () => {
         // let url = "ws://localhost:5000/ws"
         let url = "wss://young-brushlands-05640.herokuapp.com/ws";
@@ -93,11 +91,11 @@ class ChatRoom extends React.Component {
     render = () => {
         const subtitle = this.participants().length.toString() + " online"
         return (
-            <div className="flex flex-col">
+            <div className="flex flex-col h-screen">
                 <ChatRoomHeader 
                     title={this.username} 
                     subtitle={subtitle} />
-                <MessageBoard messages={this.state.messages} />
+                <MessageBoard className="flex-1" messages={this.state.messages} />
                 <MessengerBar onSend={this.sendHandler} />
             </div>
         );

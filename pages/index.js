@@ -1,14 +1,14 @@
-/**
- * Our user doesn't need to sign up
- * All we need is some name to call the user
- * started - 12:14
- */
-
- import '../static/styles/tailwind.css';
- import { withRouter } from 'next/router'
+import '../static/styles/tailwind.css';
+import { withRouter } from 'next/router'
 
 
  class Login extends React.Component {
+
+    componentDidMount() {
+        if (window.sessionStorage.getItem("name") !== null) {
+            this.props.push("/chat");
+        }
+    }
 
     submitHandler = (event) => {
         event.preventDefault();
@@ -22,6 +22,7 @@
     }
 
     render = () => {
+
         return (
             <div id="login">
 

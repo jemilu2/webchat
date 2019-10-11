@@ -1,6 +1,7 @@
 
 import '../static/styles/tailwind.css';
 import React from 'react';
+import ReconnectingWebsocket from 'reconnecting-websocket';
 
 class Index extends React.Component {
 
@@ -31,10 +32,12 @@ class Index extends React.Component {
 
     //establishes websocket connection and sets
     //handler for various connection events.
+    // let url = "ws://localhost:8080/ws"
     ws = () => {
-        let url = "ws://localhost:8080/ws"
+        let url = "wss://young-brushlands-05640.herokuapp.com/ws";
         try {
-            this.conn = new window.WebSocket(url);
+            // this.conn = new window.WebSocket(url);
+            this.conn = new ReconnectingWebsocket(url);
             alert("ws connection established");
         } catch (error) {
             alert("Failed to establish ws connection");

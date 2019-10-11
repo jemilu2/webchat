@@ -5,11 +5,27 @@ import '../static/styles/tailwind.css';
 
 
 class MessageBoard extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.log = React.createRef();
+    }
+
+    adjustHeight = () => {
+        if(this.log.current === null) {
+            return;
+        }
+        let log = this.log.current;
+        log.scrollTop = log.clientHeight + 1000;
+    }
+
     render = () => {
+        this.adjustHeight();
         const {messages} = this.props || [];
+        const {className} = this.props;
         return (
-            <div id="message-board" className="p-10">
-            
+            <div id="message-board" className={"p-10 "+className} >
+            <div ref={this.log}>
             {
                 messages.map((message,index)=>{
                     const card = <ChatCard message={message} />
@@ -28,14 +44,13 @@ class MessageBoard extends React.Component {
                     }
                 })
             }
+            </div>
 
             <style jsx>{`
                 #message-board {
                     background-image:url(/static/images/whatsapp3.png);
                     background-repeat:no-repeat;
                     background-size:cover;
-                    height:100vh;
-                    max-height:83vh;
                     overflow-y: scroll;
                     overflow-x:hidden;
                 }
@@ -67,13 +82,5 @@ class MessageBoard extends React.Component {
 MessageBoard.propTypes = {
     messages : PropTypes.array,
 }
-
-// background-image: url("photographer.jpg"); /* The image used */
-//   background-color: #cccccc; /* Used if the image is unavailable */
-//   height: 500px; /* You must set a specified height */
-//   background-position: center; /* Center the image */
-//   background-repeat: no-repeat; /* Do not repeat the image */
-//   background-size: cover; /* Resize the background image to cover the entire container */
-
 
 export default MessageBoard;
