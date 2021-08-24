@@ -1,4 +1,4 @@
-import '../static/styles/tailwind.css';
+import '../public/static/styles/tailwind.css';
 
 
 class PremiumButton extends React.Component {

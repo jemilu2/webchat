@@ -1,5 +1,5 @@
 
-import '../static/styles/tailwind.css';
+import '../public/static/styles/tailwind.css';
 import React from 'react';
 import ReconnectingWebsocket from 'reconnecting-websocket';
 

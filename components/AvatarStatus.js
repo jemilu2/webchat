@@ -1,7 +1,7 @@
 import Avatar from './Avatar';
 import Status from './Status';
 import PropTypes from 'prop-types';
-import '../static/styles/tailwind.css';
+import '../public/static/styles/tailwind.css';
 
 const AvatarStatus = (props) => {
     return (

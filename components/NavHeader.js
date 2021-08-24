@@ -2,7 +2,7 @@
 Navigation for Left Pane
 */
 
-import '../static/styles/tailwind.css';
+import '../public/static/styles/tailwind.css';
 import PropTypes from 'prop-types';
 import Avatar from './Avatar';
 import MoreButton from './MoreButton';

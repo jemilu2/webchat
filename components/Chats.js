@@ -1,4 +1,4 @@
-import '../static/styles/tailwind.css';
+import '../public/static/styles/tailwind.css';
 import AvatarStatus from './AvatarStatus';
 
 const chats = [

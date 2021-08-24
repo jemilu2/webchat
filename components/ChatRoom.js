@@ -1,4 +1,4 @@
-import '../static/styles/tailwind.css';
+import '../public/static/styles/tailwind.css';
 import ChatRoomHeader from './ChatRoomHeader';
 import MessageBoard from './MessageBoard';
 import MessengerBar from './MessengerBar';
@@ -94,7 +94,7 @@ class ChatRoom extends React.Component {
             <div className="flex flex-col h-screen">
                 <ChatRoomHeader 
                     title={this.username} 
-                    subtitle={subtitle} />
+                    subtitle={subtitle} style={{ backgroundColor: "#00bfa5"}}/>
                 <MessageBoard className="flex-1" messages={this.state.messages} />
                 <MessengerBar onSend={this.sendHandler} />
             </div>

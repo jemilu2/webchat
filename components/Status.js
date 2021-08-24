@@ -1,9 +1,9 @@
-import '../static/styles/tailwind.css';
+import '../public/static/styles/tailwind.css';
 
 const Status = (props) => {
     const time = props.time || ""
     return (
-        <div id="status" className="p-2 flex flex-row">
+        <div id="status" className="p-2 flex flex-row" style={{color: "white"}}>
             <div className="flex-1 min-w-xs">
                 <p className="text-lg">{props.title}</p>
                 <p className="text-grey-dark">{props.subtitle}</p>
@@ -14,6 +14,7 @@ const Status = (props) => {
             <style jsx>{`
                 #status {
                     // background-color: #f7f7f7;
+                    color: white;
                 }
 
                 #status:hover {

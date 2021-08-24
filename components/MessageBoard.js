@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import ChatCard from './ChatCard';
-import '../static/styles/tailwind.css';
+import '../public/static/styles/tailwind.css';
 
 
 
@@ -24,7 +24,7 @@ class MessageBoard extends React.Component {
         const {messages} = this.props || [];
         const {className} = this.props;
         return (
-            <div id="message-board" className={"p-10 "+className} >
+            <div id="message-board" className={"p-10 h-screen w-screen flex-grow bg-grey-500 "+className} >
             <div ref={this.log}>
             {
                 messages.map((message,index)=>{
@@ -48,11 +48,11 @@ class MessageBoard extends React.Component {
 
             <style jsx>{`
                 #message-board {
-                    background-image:url(/static/images/whatsapp3.png);
-                    background-repeat:no-repeat;
-                    background-size:cover;
+                    background-image:url(/static/images/chatroom_bg.png);
+                    background-repeat:repeat;
                     overflow-y: scroll;
                     overflow-x:hidden;
+                    background-color: #f7f7f7;
                 }
 
                 

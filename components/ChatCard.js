@@ -1,4 +1,4 @@
-import '../static/styles/tailwind.css';
+import '../public/static/styles/tailwind.css';
 import PropTypes from 'prop-types';
 
 class ChatCard extends React.Component {

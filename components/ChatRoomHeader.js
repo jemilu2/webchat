@@ -1,4 +1,4 @@
-import '../static/styles/tailwind.css';
+import '../public/static/styles/tailwind.css';
 import Avatar from './Avatar';
 import MoreButton from './MoreButton';
 import PropTypes from 'prop-types';
@@ -11,7 +11,8 @@ const AvatarStatus = (props) => {
             <Avatar image={props.image}/>
             <Status title={props.title} subtitle={props.subtitle} time={props.time}/>
             <style jsx>{`
-                
+                // background-color: #00bfa5;
+                // color: white
             `}
             </style>
         </div>

@@ -1,4 +1,4 @@
-import '../static/styles/tailwind.css';
+import '../public/static/styles/tailwind.css';
 import NavHeader from './NavHeader';
 import SearchBar from './SearchBar';
 import Chats from './Chats';
@@ -12,7 +12,7 @@ const Nav = () => {
 
         <style jsx>{`
         #nav{
-            background-color: #f7f7f7;
+            background-color: #00bfa5;
             // max-height:80%;
             overflow:vertical;
         }
