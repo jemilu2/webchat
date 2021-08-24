@@ -45,6 +45,7 @@ class ChatRoom extends React.Component {
 
     ws = () => {
         // let url = "ws://localhost:5000/ws"
+        
         let url = "wss://young-brushlands-05640.herokuapp.com/ws";
         try {
             this.conn = new ReconnectingWebsocket(url);
