@@ -3,7 +3,7 @@ A chatroom ui client for the chat application in
 gorrilla/websocket
 
 ## Demo 
-https://webchat.jemilu.now.sh
+https://webchat-nxmmnmprh-jemilu.vercel.app/chat
 
 The demo uses a chat server written by gorilla in
 their websockets documentation at
